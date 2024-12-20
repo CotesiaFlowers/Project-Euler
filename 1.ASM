@@ -18,9 +18,7 @@ include "win32ax.inc"
         div ebx
 
         xor edx, 0
-        jz start.acc
-
-        jmp start.skip
+        jnz start.skip
 
   .acc:
         add [sum], ecx
@@ -29,9 +27,8 @@ include "win32ax.inc"
         dec ecx
         jnz start.loop
 
-        ; print sum using printf function of c
         cinvoke printf, formatstring, [sum]
-        invoke  ExitProcess, 0
+        invoke ExitProcess, 0
 
         formatstring db "%d", 13, 10, 0
         sum dd 0
