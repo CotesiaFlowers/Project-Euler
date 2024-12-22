@@ -9,7 +9,6 @@ include "win32ax.inc"
         jnz start.skip ; skip if odd
         add [sum], ebx
   .skip:
-
         mov ecx, ebx ; save
 
         add ebx, eax
