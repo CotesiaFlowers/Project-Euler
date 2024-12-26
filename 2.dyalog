@@ -1,9 +1,9 @@
-∇ Fibs n;q;p;t;f
+∇ r ← EvenFibs n;q;p;i;s;r
 	q ← 5*÷2 ⍝ square root of 5
 	p ← 2÷⍨1+q ⍝ phi
-	t ← 3×⍳⌈(2+q)⍟n ⍝ even fibonacci terms approximately under n
-	f ← ⌊0.5+(p*t)÷q ⍝ Binet's formula
-	+/{(⍵<n)/⍵}f
+	i ← 3×⍳⌈(2+q)⍟n ⍝ even fibonacci terms approximately under n
+	s ← ⌊0.5+(p*i)÷q ⍝ Binet's formula
+	r ← {(⍵<n)/⍵}s
 ∇
 
-Fibs 4e6
++/EvenFibs 4e6
