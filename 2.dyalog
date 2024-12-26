@@ -1,4 +1,5 @@
+n ← 4e6
 p ← 2÷⍨1+5*÷2 ⍝ phi
-n ← 3×⍳11     ⍝ even fibonacci terms under 4 million
-+/⌊0.5+(p*n)÷5*÷2
+t ← 3×⍳⌈(2+5*÷2)⍟n ⍝ even fibonacci terms approximately under n
++/{(⍵<n)/⍵}⌊0.5+(p*t)÷5*÷2
 
